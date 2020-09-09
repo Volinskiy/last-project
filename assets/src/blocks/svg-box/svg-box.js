@@ -1,0 +1,1 @@
+require('./svg-box.less');

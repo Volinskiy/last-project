@@ -1,0 +1,50 @@
+@import '../mixins.less';
+@import '../variables';
+
+@arrow-height: 22px;
+
+.arrow {
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: static;
+    margin-top: 0;
+    width: 30px;
+    height: @arrow-height;
+    box-sizing: content-box;
+    border: 5px solid transparent;
+    left: auto;
+    right: auto;
+
+    &:after {
+        content: '';
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &--next {
+        background-image: url("./img/arrow-arrow_next.svg");
+        right: 30px;
+    }
+
+    &--prev {
+        background-image: url("./img/arrow-arrow_prev.svg");
+        left: 30px;
+        margin-right: 10px;
+
+        @media @min-768 {
+            margin-right: 20px;
+        }
+    }
+
+    &--absolute {
+        position: absolute;
+        margin-top: -@arrow-height/2;
+    }
+
+    &--mrg-left {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,30 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.sections-nav-mobile {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 40px 0 30px 0;
+        list-style: none;
+        font-family: @Font-Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__link {
+        display: block;
+        padding: 8px 20px;
+        color: black;
+    }
+}

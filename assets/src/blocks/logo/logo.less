@@ -1,0 +1,160 @@
+@import '../mixins.less';
+@import '../variables';
+
+.logo {
+    display: inline-block;
+    padding-left: 7px;
+    background-color: @main-golden;
+    border-radius: 0 6px 6px 6px;
+    box-sizing: border-box;
+    width: 72px;
+    height: 26px;
+
+    @media @min-375 {
+        padding-left: 8px;
+        width: 82px;
+        height: 30px;
+    }
+    @media @min-400 {
+        width: 95px;
+        height: 40px;
+    }
+    @media @min-600 {
+        width: 190px;
+    }
+    @media @min-768 {
+        border-radius: 0 12px 12px 12px;
+        padding-left: 24px;
+        height: 140px;
+    }
+    @media @min-1600 {
+        width: 220px;
+        height: 140px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+
+        @media @min-600 {
+            align-items: flex-start;
+            padding-top: 3px;
+        }
+        @media @min-768 {
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 0;
+        }
+    }
+
+
+    &__svg-box {
+        width: 59px;
+        height: 18px;
+        fill: @white;
+
+        @media @min-375 {
+            width: 66px;
+            height: 20px;
+        }
+        @media @min-600 {
+            width: 101px;
+            height: 30px;
+        }
+        @media @min-768 {
+            width: 135px;
+            height: 40px;
+        }
+        @media @min-1600 {
+            width: 172px;
+            height: 53px;
+        }
+    }
+
+
+    &__caption {
+        font-family: @Font-Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: @white;
+        margin: 10px 0 0 0;
+        width: 142px;
+        display: none;
+
+        @media @min-600 {
+            font-size: 10px;
+            line-height: 9px;
+            display: block;
+            width: 70px;
+            margin-bottom: 5px;
+        }
+        @media @min-768 {
+            line-height: normal;
+            width: 142px;
+            font-size: 15px;
+        }
+        @media @min-1600 {
+            width: 150px;
+        }
+    }
+}
+
+.fixed {
+    .logo {
+        @media @min-768 {
+            width: 190px;
+            height: 40px;
+            padding: 3px 15px 7px 15px;
+            border-radius: 0 5px 5px 5px;
+        }
+        @media @min-1600 {
+            width: 220px;
+        }
+
+        &__container {
+            @media @min-768 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__svg-box {
+            @media @min-768 {
+                width: 100px;
+                height: 30px;
+                flex-shrink: 0;
+            }
+        }
+
+        &__caption {
+            @media @min-768 {
+                font-size: 10px;
+                line-height: 9px;
+                height: auto;
+                width: 70px;
+            }
+            @media @min-1600 {
+                width: 75px;
+            }
+        }
+
+        &__sub-caption {
+            @media @max-1600 {
+                display: none;
+            }
+        }
+
+    }
+}

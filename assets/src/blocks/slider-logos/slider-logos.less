@@ -1,0 +1,52 @@
+@import '../mixins.less';
+@import '../variables';
+
+.slider-logos {
+
+    &--mrg-top {
+        margin-top: 35px;
+    }
+
+    &__container {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        @media @min-375 {
+            margin-left: 18px;
+            margin-right: 18px;
+        }
+        @media @min-1024 {
+            margin-left: 38px;
+            margin-right: 38px;
+        }
+        @media @min-1600 {
+            margin-left: 55px;
+            margin-right: 55px;
+        }
+
+        &--mrg-top {
+            margin-top: 35px;
+        }
+    }
+
+
+    &__wrapper {
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 13%;
+
+        @media @min-375 {
+            width: 12%;
+        }
+    }
+
+    &__img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+}

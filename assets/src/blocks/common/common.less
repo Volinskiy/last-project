@@ -1,0 +1,79 @@
+/*
+*   Принятые сокращения в именах селекторов
+*   h - header
+*   b - block
+*   btn - button
+*
+*/
+
+@import '../mixins.less';
+@import '../variables';
+
+body {
+    min-height: 100vh;
+    font-weight: 400;
+    font: 15px @Font-IBM-Plex;
+
+    &.overflow-h {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+.hide-less-500 {
+    @media @max-500 {
+        display: none !important;
+    }
+}
+
+.hide-less-768 {
+    @media @max-768 {
+        display: none !important;
+    }
+}
+
+.hide-less-1024 {
+    display: none !important;
+
+    @media @min-1024 {
+        display: initial !important;
+    }
+}
+
+.hide-less-1600 {
+    display: none !important;
+
+    @media @min-1600 {
+        display: initial !important;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+input::-webkit-input-placeholder {
+    color: @light-gray-text;
+    padding: 0;
+    margin: 0;
+}
+input::-ms-input-placeholder {
+    color: @light-gray-text;
+    padding: 0;
+    margin: 0;
+}
+input::placeholder {
+    color: @light-gray-text;
+    padding: 0;
+    margin: 0;
+}
+.h-text {
+    font-family: @Font-Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+}
+.link {
+    color: @light-blue;
+}

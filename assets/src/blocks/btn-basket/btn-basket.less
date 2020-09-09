@@ -1,0 +1,46 @@
+@import '../mixins.less';
+@import '../variables';
+
+.btn-basket {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+
+    &__img {
+        width: 22px;
+        height: 21px;
+        fill: @main-golden;
+        background: url("../common/img/common-basket.svg") center center no-repeat;
+        background-size: cover;
+
+        @media @min-375 {
+            width: 26px;
+            height: 24px;
+        }
+        @media @min-400 {
+            width: 30px;
+            height: 30px;
+        }
+        @media @min-768 {
+            width: 39px;
+            height: 38px;
+        }
+    }
+
+
+    &__text {
+        color: @light-gray-text;
+        margin-left: 7px;
+        font-size: 13px;
+
+        @media @min-768 {
+            margin-left: 17px;
+        }
+    }
+
+
+    &__text-black {
+        color: black;
+    }
+}

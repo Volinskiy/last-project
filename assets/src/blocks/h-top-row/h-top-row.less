@@ -1,0 +1,164 @@
+@import '../mixins.less';
+@import '../variables';
+
+.h-top-row {
+    @seporator: ~'1px solid #474747';
+
+    background-color: #212121;
+    font-family: @Font-Montserrat;
+    font-size: 13px;
+    display: none;
+
+    @media @min-768 {
+        display: block;
+    }
+
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 2;
+        padding: 10px 0;
+        border-right: @seporator;
+        text-decoration: none;
+
+        &:last-child {
+            border: none;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        &:first-child {
+            flex-grow: 1;
+            justify-content: flex-start;
+        }
+
+        &:hover {
+
+            .h-top-row__text {
+                text-decoration: underline;
+            }
+        }
+
+        &--no-separate {
+            border-right: none;
+        }
+
+        &--left-separate {
+            border-left: @seporator !important;
+        }
+    }
+
+
+    &__text {
+        color: @white;
+
+        &--big {
+            font-size: 15px;
+        }
+    }
+
+
+    &__icon {
+        margin-right: 12px;
+        background-position: center center;
+        background-size: cover;
+
+        &--left {
+            margin-right: 0;
+            margin-left: 12px;
+        }
+
+        &--no-margin-1024 {
+            @media @max-1024 {
+                margin: 0;
+            }
+        }
+
+        &--no-margin-1600 {
+            @media @max-1600 {
+                margin: 0;
+            }
+        }
+
+        &.phone {
+            background-image: url("../common/img/common-phone.svg");
+            width: 16px;
+            height: 16px;
+        }
+        &.vk {
+            background-image: url("../common/img/common-vk-color.svg");
+            width: 21px;
+            height: 11px;
+        }
+        &.insta-color {
+            background-image: url("../common/img/common-instagram-color.svg");
+            width: 16px;
+            height: 16px;
+        }
+        &.heart {
+            background-image: url("../common/img/common-heart.svg");
+            width: 16px;
+            height: 16px;
+        }
+        &.four-lines {
+             background-image: url("../common/img/common-four-lines.svg");
+             width: 16px;
+             height: 13px;
+        }
+        &.profile {
+            background-image: url("../common/img/common-profile.svg");
+            width: 16px;
+            height: 16px;
+        }
+        &.exit {
+            background-image: url("../common/img/common-exit.svg");
+            width: 13px;
+            height: 13px;
+        }
+        &.entry {
+            background-image: url("../common/img/common-entry.svg");
+            width: 17px;
+            height: 17px;
+        }
+    }
+
+    // Распорка между иконками в ячейке "instagram"
+    &__spacer {
+        margin-left: 80px;
+
+        @media @min-1024 {
+            margin-left: 55px;
+        }
+        @media @min-1600 {
+            margin-left: 65px;
+        }
+
+        &--no-authorise {
+            margin-left: 183px;
+
+            @media @min-1024 {
+                margin-left: 362px;
+            }
+            @media @min-1600 {
+                margin-left: 366px;
+            }
+        }
+
+        &--menu-sections {
+            margin-left: 248px;
+        }
+    }
+
+}

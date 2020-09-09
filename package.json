@@ -1,0 +1,40 @@
+{
+  "name": "etudesite.ru",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Maximaster | Borzov Sergey",
+  "license": "MIT",
+  "scripts": {
+    "build": "encore dev",
+    "build:watch": "encore dev --watch",
+    "build:production": "set BUILD_MODE=production && encore production",
+    "dev": "set NODE_DEV_SERVER=true NODE_ENV=development && webpack-dev-server"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@symfony/webpack-encore": "^0.30.2",
+    "babel-eslint": "^10.0.3",
+    "core-js": "^3.4.1",
+    "devserver": "^0.2.5",
+    "eslint": "^6.5.1",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-babel": "^5.3.0",
+    "inputmask": "^4.0.9",
+    "ismobilejs": "^1.0.3",
+    "less": "^3.10.3",
+    "less-loader": "4..0",
+    "magnific-popup": "^1.1.0",
+    "nouislider": "^13.1.5",
+    "perfect-scrollbar": "^1.4.0",
+    "picturefill": "^3.0.3",
+    "smooth-scrollbar": "^8.5.0",
+    "svg-sprite-loader": "^4.1.6",
+    "swiper": "^5.1.0",
+    "throttle-debounce": "^2.1.0",
+    "wnumb": "^1.2.0",
+    "ymaps": "^0.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

@@ -1,0 +1,131 @@
+@import '../mixins.less';
+@import '../variables';
+
+.slider {
+    &__container {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        border-radius: 5px;
+        background-color: @white;
+        margin-top: 15px;
+
+        @media @min-768 {
+            margin-top: 30px;
+
+        }
+        @media @min-1024 {
+            margin-top: 45px;
+        }
+
+        &--border {
+            border: 1px solid @main-golden;
+        }
+    }
+
+    &__header,
+    &__arrow-container {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__header {
+        display: flex;
+
+        &--align-flex-start {
+            align-items: flex-start;
+        }
+    }
+
+    //Только для слайдера "Товары месяца"
+    &__header-description {
+        display: none;
+        font-family: @Font-IBM-Plex;
+        font-size: 15px;
+        line-height: 27px;
+        color: @light-gray-text;
+
+        @media @min-768 {
+            display: initial;
+            max-width: 252px;
+            margin-left: 100px;
+        }
+
+        @media @min-1024 {
+            max-width: 325px;
+            margin-left: 206px;
+        }
+    }
+
+    &__arrow-container {
+        display: inline-flex;
+
+        &--product {
+            width: 98px;
+            right: -2px;
+            top: -3px;
+
+            @media @max-768 {
+                width:unset;
+            }
+        }
+    }
+
+    &__header {
+        align-self: normal;
+    }
+
+    .slider__item {
+        height: auto;
+        box-shadow: inset 1px -1px 0px 0px @gray-controls;
+
+        &--two-rows-slider {
+            &:nth-child(2):not(:hover),
+            &:nth-child(3):not(:hover) {
+                box-shadow: inset 0px -1px 0px 0px #E5E5E5;
+            }
+        }
+
+        &:nth-last-child(2):not(:nth-child(odd)):not(:hover) {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 1px;
+                background-color: @gray-controls;
+                top: 0;
+                right: -1px;
+            }
+        }
+
+        &:hover {
+            box-shadow: inset 0 0 0 1px @main-golden;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        &--two-rows-banner {
+            order: 3;
+
+            @media @min-550 {
+                order: 5;
+            }
+            @media @min-1024 {
+                order: 7;
+            }
+        }
+    }
+
+    &--margin-top {
+        margin-top: 50px;
+
+        @media @max-1024 {
+            margin-top: 86px;
+        }
+
+        @media @max-768 {
+            margin-top: 38px;
+        }
+    }
+}

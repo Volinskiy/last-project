@@ -1,0 +1,32 @@
+@import './variables';
+
+.button-hover {
+    background-color: @hover-light-golden;
+    border: 1px solid @main-golden;
+}
+
+.overlay-mixin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 12;
+
+    @media @min-768 {
+        display: none;
+    }
+}
+
+.body-overflow-h {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.menu-link-hovered-state {
+    cursor: pointer;
+    background-color: @main-golden;
+    color: @white;
+}

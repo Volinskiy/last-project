@@ -1,0 +1,58 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.menu {
+    @menu-width: 330px;
+
+    z-index: 20;
+    background-color: white;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px 0 20px 0;
+
+
+    &__li {
+        font-size: 13px;
+        font-family: @Font-Montserrat;
+    }
+
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+
+    &__link {
+        display: block;
+        padding: 7px 50px 7px 40px;
+        color: black;
+
+        &.hovered {
+            .menu-link-hovered-state;
+        }
+        &.current-item {
+            .menu-link-hovered-state;
+        }
+    }
+}
+
+//Стили скроллбара плагина smooth-scrollbar
+.scrollbar-track {
+    background-color: #c8c8c8 !important;
+    opacity: .2 !important;
+    width: 5px !important;
+    right: 5px !important;
+
+    &:hover {
+        opacity: .3 !important;
+    }
+}
+
+.scrollbar-thumb {
+    background-color: #191919 !important;
+    width: 5px !important;
+}

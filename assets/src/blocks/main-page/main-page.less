@@ -1,0 +1,120 @@
+@import '../mixins.less';
+@import '../variables';
+
+.main-page {
+    min-height: 100px;
+    background-color: @white;
+
+
+    &__slider-banners {
+        position: relative;
+    }
+
+
+    &__slider-banners-pagination {
+        bottom: -10px;
+    }
+
+
+    &__item {
+        padding: 30px 0 0 0;
+
+        @media @min-768 {
+            padding: 50px 0 0 0;
+        }
+        @media @min-1600 {
+            padding: 60px 0 0 0;
+        }
+
+        &--padding-b {  // Первый блок после слайдера с баннерами
+            padding-bottom: 30px;
+
+            @media @min-768 {
+                padding-bottom: 55px;
+            }
+            @media @min-1600 {
+                padding-bottom: 65px;
+            }
+        }
+
+        &--padding-top-big {
+            @media @min-768 {
+                padding-top: 60px;
+            }
+            @media @min-1600 {
+                padding-top: 70px;
+            }
+        }
+
+        &--gray {
+            background-color: @main-gray-background;
+        }
+
+
+        &:last-child {
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            @media @min-768 {
+                padding-top: 55px;
+                padding-bottom: 65px;
+            }
+            @media @min-1024 {
+                padding-top: 70px;
+                padding-bottom: 80px;
+            }
+        }
+    }
+
+
+    &__item-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-self: normal;
+    }
+
+
+    &__b-arrows {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+        & > * + * {
+            margin-left: 10px;
+        }
+    }
+
+    &__logos-arrows {
+        margin-top: 15px;
+
+        @media @min-1024 {
+            margin-top: 35px;
+        }
+    }
+
+    &__logos-border {
+        margin-top: 30px;
+        border-bottom:  @border-control;
+
+        @media @min-768 {
+            margin-top: 70px;
+        }
+    }
+
+
+    &__b-instagram-pic {
+        margin-top: 20px;
+
+        @media @min-768 {
+            margin-top: 40px;
+        }
+        @media @min-1024 {
+            margin-top: 50px;
+        }
+    }
+}

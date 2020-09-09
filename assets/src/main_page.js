@@ -1,0 +1,12 @@
+import './blocks/main-page/main-page';
+import './blocks/slider/slider';
+import './blocks/cat_sect_item/cat_sect_item.less';
+import './blocks/slider-banners/slider-banners';
+import './blocks/slider-pop-categories/slider-pop-categories';
+import './blocks/slider-goods-month/slider-goods-month';
+import './blocks/slider-new-items/slider-new-items';
+import './blocks/slider-stock-discounts/slider-stock-discounts';
+import './blocks/two-text-column/two-text-column';
+import './blocks/slider-logos/slider-logos';
+import './blocks/news-tile/news-tile';
+import './blocks/instagram-pic/instagram-pic';

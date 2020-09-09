@@ -1,0 +1,226 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.menu-catalog {
+
+    display: flex;
+    flex-direction: column;
+
+    @media @max-768 {
+        border-radius: 0;
+        padding-bottom: 10px;
+        box-shadow: none;
+        overflow: hidden; //Обрезаем внутреннюю тень наверху меню на мобильных
+    }
+
+
+    &::before {
+        @media @max-768 {
+            content: "";
+            position: absolute;
+            top: -1px;
+            width: 100%;
+            height: 1px;
+            box-shadow: 0 0 15px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__list-wrapper {
+        position: relative;
+        flex-grow: 1;
+
+        &.full {
+            width: 100%;
+
+            @media @min-768 {
+                width: calc(@menu-catalog-width-small*2);
+            }
+            @media @min-1024 {
+                width: calc(@menu-catalog-width-full*2);
+            }
+
+            .ps__rail-y {
+
+                @media @min-768 {
+                    right: calc(50% + 5px) !important;
+                }
+            }
+        }
+    }
+
+
+    &__link {
+
+        &--parent {
+            position: relative;
+        }
+
+        &.hovered {
+
+            .menu-catalog__link-letter {
+                color: #ffd380;
+            }
+        }
+    }
+
+
+    &__link-letter {
+        position: absolute;
+        left: 20px;
+        color: #cccccc;
+    }
+
+    &__btn-else {
+        width: 70%;
+        margin: 15px auto 0 auto;
+        font-size: 13px;
+
+        @media @min-1024 {
+            margin: 30px auto 0 auto;
+            font-size: inherit;
+        }
+    }
+
+
+    &__list {
+        background-color: #fff;
+        max-width: 100%;
+
+        @media @min-768 {
+            max-width: @menu-catalog-width-small;
+        }
+        @media @min-1024 {
+            max-width: @menu-catalog-width-full;
+        }
+    }
+
+
+    &__li {
+        position: relative;
+    }
+
+
+    &__lists-sub {
+        width: 100%;
+        z-index: 10;
+        padding: 0;
+        list-style-type: none;
+        background-color: #FFF6E7;
+
+        //Подстановка класса tablet, вложенным спискам, выключает это правило,
+        //заставляя подменю выпадать вниз, вместа выпадения вбок
+        &:not(.tablet) {
+            @media @min-768 {
+                position: absolute;
+                top: 0;
+                left: calc(100% - 15px);
+                background-clip: padding-box;
+                border-left: 15px solid transparent;
+                padding: 5px 0;
+                border-radius: 0 5px 5px 0;
+            }
+        }
+
+        .menu-catalog__link {
+            color: #555555;
+
+            @media @min-768 {
+                padding-left: 20px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &.hovered {
+                color: @white;
+            }
+        }
+
+        .menu-catalog__link--first::before {
+            display: none;
+        }
+
+        //Для планшетов
+        &.tablet {
+            .menu-catalog__link {
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+
+    &__li-arrow {
+        width: 32px;
+        height: 100%;
+        background: url("../common/img/common-arrow-down-white.svg") center center no-repeat;
+        background-size: 12px 7px;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        transform: rotate(180deg);
+
+        //Подстановка класса tablet, стрелкам закрытия подменю, выключает это правило
+        &:not(.tablet) {
+            @media @min-768 {
+                display: none;
+            }
+        }
+    }
+
+}
+
+//Стили оверлея (затемнение фона при открыии меню на мобильных)
+.overlay-menu-catalog {
+    .overlay-mixin;
+}
+//Стили оверлея (затемнение фона при открыии меню на мобильных)
+body.body-overflow-menu-catalog {
+    .body-overflow-h;
+}
+
+// Стили для кастомного скроллбара. Компонент perfect-scrollbar
+
+.ps__rail-y {
+    right: 5px !important;
+    left: initial !important;
+    width: 5px;
+    background-color: #c8c8c8 !important;
+    opacity: 0.2;
+    height: 100% !important;
+}
+
+
+.ps__thumb-y {
+    width: 5px;
+    right: 0;
+    background-color: #191919;
+    opacity: initial;
+}
+
+
+.ps__rail-y:hover > .ps__thumb-y,
+.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y.ps--clicking .ps__thumb-y {
+    background-color: #191919;
+    width: 5px;
+}
+
+.ps__rail-y:hover {
+    opacity: 0.3;
+    cursor: initial;
+}
+
+.ps:hover > .ps__rail-y,
+.ps--focus > .ps__rail-y,
+.ps--scrolling-y > .ps__rail-y {
+    opacity: 0.2;
+}
+
+
+.ps .ps__rail-y:hover,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-y.ps--clicking {
+    background-color: #c8c8c8;
+    opacity: 0.3;
+}

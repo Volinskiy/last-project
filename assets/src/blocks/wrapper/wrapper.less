@@ -1,0 +1,44 @@
+@import '../mixins.less';
+@import '../variables';
+
+.wrapper {
+    margin: 0 auto;
+    //width: 280px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media @min-375 {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    @media @min-768 {
+        padding: initial;
+        width: 740px;
+    }
+    @media @min-1024 {
+        width: 970px;
+    }
+    @media @min-1600 {
+        width: 1170px;
+    }
+
+
+    &--full {
+        @media @max-768 {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        @media @max-375 {
+            padding-left: 9px;
+            padding-right: 9px;
+        }
+    }
+
+
+    &--flex {
+        display: flex;
+    }
+
+}

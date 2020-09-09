@@ -1,0 +1,72 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.two-text-column {
+    display: flex;
+    flex-direction: column;
+
+    @media @min-768 {
+        flex-direction: row;
+    }
+
+    & > * {
+
+        @media @min-768 {
+            width: 50%;
+        }
+    }
+
+    &__b-header {
+        --icon-size: 30px;
+
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: var(--icon-size);
+        padding-left: calc(20px + var(--icon-size));
+        background: url("./img/two-text-column-insta-color.svg") left center no-repeat;
+        background-size: var(--icon-size) var(--icon-size);
+
+        @media @min-768 {
+            --icon-size: 32px;
+            width: 45%;
+            padding-left: calc(25px + var(--icon-size));
+        }
+        @media @min-1024 {
+            width: 46.5%;
+        }
+        @media @min-1600 {
+            width: 47.5%;
+        }
+    }
+
+
+    &__header {
+
+        @media @min-768 {
+            width: 91%;
+        }
+        @media @min-1024 {
+            width: 90%;
+        }
+    }
+
+
+    &__description {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 24px;
+        color: @light-gray-text;
+
+        @media @min-768 {
+            margin-top: 0;
+            font-size: 15px;
+            line-height: 27px;
+            width: 50%;
+        }
+
+    }
+}

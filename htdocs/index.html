@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>etudesite.develop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/build/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/assets/build/css/main_page.css" type="text/css">
+</head>
+<body>
+
+<header class="header js-header">
+
+    <!-- Строка с ссылками для авторизованых пользователей -->
+    <div class="h-top-row header__top">
+        <div class="wrapper">
+            <div class="h-top-row__container">
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__text">Доставка</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__text">Контакты</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__icon phone"></span>
+                    <span class="h-top-row__text h-top-row__text--big">7 495 740 6220</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__icon vk h-top-row__icon--no-margin-1600"></span>
+                    <span class="h-top-row__text hide-less-1600">Чат с нами</span>
+                </a>
+                <a class="h-top-row__item h-top-row__item--no-separate" href="#">
+                    <span class="h-top-row__icon insta-color h-top-row__icon--no-margin-1600"></span>
+                    <span class="h-top-row__text hide-less-1600">Instagram</span>
+                </a>
+                <i class="h-top-row__spacer"></i>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__icon heart h-top-row__icon--no-margin-1024"></span>
+                    <span class="h-top-row__text hide-less-1024">275</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__icon four-lines h-top-row__icon--no-margin-1024"></span>
+                    <span class="h-top-row__text hide-less-1024">Мои заказы</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__icon profile h-top-row__icon--no-margin-1024"></span>
+                    <span class="h-top-row__text hide-less-1024">Мой профиль</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__text hide-less-1600">Выйти</span>
+                    <span class="h-top-row__icon exit h-top-row__icon--left h-top-row__icon--no-margin-1600"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Строка с ссылками для НЕавторизованых пользователей -->
+    <!--<div class="h-top-row header__top">
+        <div class="wrapper">
+            <div class="h-top-row__container">
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__text">Доставка</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__text">Контакты</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__icon phone"></span>
+                    <span class="h-top-row__text h-top-row__text&#45;&#45;big">7 495 740 6220</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__icon vk h-top-row__icon&#45;&#45;no-margin-1600"></span>
+                    <span class="h-top-row__text hide-less-1600">Чат с нами</span>
+                </a>
+                <a class="h-top-row__item h-top-row__item&#45;&#45;no-separate" href="#">
+                    <span class="h-top-row__icon insta-color h-top-row__icon&#45;&#45;no-margin-1600"></span>
+                    <span class="h-top-row__text hide-less-1600">Instagram</span>
+                </a>
+                <i class="h-top-row__spacer&#45;&#45;no-authorise"></i>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__icon heart h-top-row__icon&#45;&#45;no-margin-1024"></span>
+                    <span class="h-top-row__text hide-less-1024">275</span>
+                </a>
+                <a class="h-top-row__item" href="#">
+                    <span class="h-top-row__text hide-less-1600">Войти</span>
+                    <span class="h-top-row__icon entry h-top-row__icon&#45;&#45;left h-top-row__icon&#45;&#45;no-margin-1600"></span>
+                </a>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="h-middle-row header__middle js-h-middle-row">
+        <div class="wrapper wrapper--full">
+            <div class="h-middle-row__container">
+                <div class="logo h-middle-row__logo">
+                    <a href="#" class="logo__container">
+                        <div class="logo__svg-box">
+                            <svg viewBox="0 0 172 53">
+                                <path
+                                    d="M171.023 7.788C170.594 8.556 169.995 9.155 169.227 9.584C168.459 10.014 167.651 10.229 166.805 10.229C165.959 10.229 165.152 10.014 164.384 9.584C163.615 9.155 163.017 8.556 162.587 7.788C162.158 7.02 161.943 6.213 161.943 5.366C161.943 4.516 162.162 3.702 162.6 2.926C163.038 2.149 163.64 1.551 164.406 1.132C165.172 0.712998 165.971 0.503998 166.805 0.503998C167.639 0.503998 168.439 0.712998 169.205 1.132C169.97 1.551 170.573 2.149 171.01 2.926C171.448 3.702 171.667 4.516 171.667 5.366C171.667 6.213 171.453 7.02 171.023 7.788ZM170.182 3.405C169.831 2.779 169.347 2.298 168.732 1.964C168.116 1.63 167.474 1.462 166.805 1.462C166.136 1.462 165.494 1.63 164.879 1.964C164.263 2.298 163.779 2.777 163.428 3.402C163.077 4.026 162.901 4.681 162.901 5.366C162.901 6.043 163.074 6.691 163.419 7.309C163.764 7.926 164.245 8.408 164.863 8.753C165.481 9.098 166.128 9.27 166.805 9.27C167.482 9.27 168.13 9.098 168.748 8.753C169.365 8.408 169.847 7.926 170.192 7.309C170.537 6.691 170.709 6.043 170.709 5.366C170.709 4.685 170.533 4.031 170.182 3.405ZM166.767 7.175C167.051 7.175 167.296 7.092 167.503 6.925C167.711 6.757 167.872 6.479 167.986 6.09L169.008 6.433C168.847 6.966 168.58 7.374 168.208 7.658C167.836 7.941 167.391 8.083 166.875 8.083C166.151 8.083 165.561 7.846 165.104 7.372C164.647 6.898 164.418 6.244 164.418 5.411C164.418 4.865 164.52 4.378 164.723 3.951C164.926 3.523 165.219 3.204 165.602 2.992C165.985 2.781 166.414 2.675 166.888 2.675C167.408 2.675 167.843 2.799 168.192 3.046C168.541 3.294 168.813 3.684 169.008 4.217L167.979 4.458C167.861 4.15 167.708 3.925 167.519 3.786C167.331 3.646 167.108 3.576 166.85 3.576C166.464 3.576 166.149 3.721 165.904 4.011C165.658 4.301 165.536 4.755 165.536 5.373C165.536 5.99 165.656 6.445 165.897 6.737C166.139 7.029 166.428 7.175 166.767 7.175ZM170.174 32.218V33.9H155.763C155.907 36.686 158.309 37.983 161.383 37.983C163.785 37.983 165.562 37.406 167.244 36.446L169.357 41.345C166.667 42.979 163.785 43.555 160.807 43.555C151.776 43.555 148.509 37.791 148.509 31.978C148.509 25.157 152.208 19.777 159.366 19.777C166.187 19.777 170.174 24.484 170.174 32.218ZM159.222 25.157C156.82 25.157 155.667 27.078 155.667 29.096H162.921C162.872 27.127 161.864 25.157 159.222 25.157ZM141.968 25.926V34.957C141.968 37.118 142.641 37.839 144.082 37.839C145.283 37.839 146.532 37.406 147.397 36.878L149.414 41.778C147.637 42.979 144.466 43.555 142.161 43.555C137.597 43.555 134.715 41.009 134.715 36.878V25.926H134.763V20.353H134.715V14.973L141.968 12.908V20.353H148.886L147.252 25.926H141.968ZM128.807 17.663C126.357 17.663 124.484 15.838 124.484 13.484C124.484 11.226 126.357 9.353 128.807 9.353C131.257 9.353 133.13 11.13 133.13 13.484C133.13 15.742 131.257 17.663 128.807 17.663ZM113.783 43.555C109.844 43.555 106.53 42.498 104.368 41.153L106.578 35.965C108.547 37.262 110.997 37.983 113.111 37.983C115.176 37.983 116.521 37.599 116.521 36.446C116.521 33.371 105.809 34.668 105.809 27.031C105.809 22.659 109.46 19.777 115.08 19.777C117.818 19.777 120.316 20.209 122.382 20.93V26.934C120.22 26.07 117.866 25.349 115.368 25.349C113.591 25.349 112.87 25.83 112.87 26.694C112.87 29.288 123.583 28.183 123.583 36.254C123.583 41.586 118.827 43.555 113.783 43.555ZM95.5772 37.983C97.9792 37.983 99.7562 37.406 101.437 36.446L103.551 41.345C100.861 42.979 97.9792 43.555 95.0002 43.555C85.9692 43.555 82.7032 37.791 82.7032 31.978C82.7032 25.157 86.4022 19.777 93.5592 19.777C100.38 19.777 104.367 24.484 104.367 32.218V33.9H89.9562C90.1012 36.686 92.5022 37.983 95.5772 37.983ZM97.1142 29.096C97.0662 27.127 96.0572 25.157 93.4152 25.157C91.0132 25.157 89.8602 27.078 89.8602 29.096H97.1142ZM74.3302 41.301C74.3272 41.3 74.3152 41.296 74.3152 41.296C74.3152 41.296 72.4952 43.552 69.1502 43.555C61.1762 43.563 58.3032 39.28 58.3032 31.882C58.3032 24.821 63.5392 19.777 71.2732 19.777C71.8012 19.777 73.1462 19.825 73.8192 19.921V9.065H81.0722V41.247C81.1202 42 81.2162 42.771 81.4092 43.398H75.3082L74.3302 41.301ZM73.8192 36.953L73.7712 36.529V25.823C73.1192 25.732 72.5482 25.685 71.6572 25.685C68.0062 25.685 65.7002 27.943 65.7002 31.786C65.7002 35.629 68.3902 37.647 71.7052 37.647C72.2342 37.647 73.1942 37.599 73.8192 37.406V36.953ZM50.2822 40.913C48.7452 42.306 46.5352 43.555 43.5572 43.555C41.3482 43.555 37.8412 42.69 36.2082 38.944C35.6792 37.695 35.3432 36.11 35.3432 33.756V20.353H42.5972V33.323C42.5972 34.332 42.7412 35.101 43.0772 35.725C43.6532 36.782 44.6622 37.455 46.2952 37.455C47.6402 37.455 48.8412 37.022 49.7542 36.206V20.353H57.0082V38.896C57.0082 40.001 57.0082 41.826 57.3922 43.075H51.2912L50.2822 40.913ZM28.1392 25.926V34.957C28.1392 37.118 28.8112 37.839 30.2522 37.839C31.4532 37.839 32.7022 37.406 33.5672 36.878L35.5842 41.778C33.8072 42.979 30.6372 43.555 28.3312 43.555C23.7672 43.555 20.8852 41.009 20.8852 36.878V25.926H20.9332V20.353H20.8852V14.973L28.1392 12.908V20.353H34.0952L32.4622 25.926H28.1392ZM8.30117 17.615V24.004H14.8822L13.9212 30.201H8.30117V36.878H18.9172L19.8772 43.075H0.951172V11.418H19.9732L18.1002 17.615H8.30117ZM123.197 45.957L121.756 52.201H104.944L106.385 45.957H123.197ZM132.41 43.075H125.156V20.353H132.41V43.075Z"/>
+                            </svg>
+                        </div>
+                        <h2 class="logo__caption">
+                            Интернет магазин <span class="hide-less-768 logo__sub-caption">Этюд</span>
+                        </h2>
+                    </a>
+                </div>
+                <button class="h-middle-row__arrow-back svg-box js-hide-form-search" type="button"></button>
+                <div class="btn-catalog h-middle-row__btn-catalog js-btn-catalog">
+                    Каталог
+                    <nav class="menu-catalog menu h-middle-row__menu-catalog hidden js-menu-catalog">
+                        <div class="menu-catalog__list-wrapper js-menu__scroll">
+                            <ul class="menu-catalog__list menu__list">
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">А</span>
+                                        Акварельные карандаши
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Б</span>
+                                        Бумага и картон
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Г</span>
+                                        Графитовые карандаши
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Грифели и стержни</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Е</span>
+                                        Ежедневники и записные книжки
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu-catalog__link--parent menu__link js-link">
+                                        <span class="menu-catalog__link-letter">И</span>
+                                        Инструменты для художника
+                                        <span class="menu-catalog__li-arrow js-btn-close-submenu"></span>
+                                    </a>
+                                    <ul class="menu-catalog__lists-sub hidden js-submenu-catalog-list">
+                                        <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                            <a href="/html/" class="menu-catalog__link menu__link js-link">Инструменты для художника о бла ди о бла да</a>
+                                        </li>
+                                        <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                            <a href="/html/" class="menu-catalog__link menu__link js-link">Инструменты для художника</a>
+                                        </li>
+                                        <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                            <a href="/html/" class="menu-catalog__link menu__link js-link">Инструменты для художника</a>
+                                        </li>
+                                        <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                            <a href="/html/" class="menu-catalog__link menu__link js-link">Инструменты для художника</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu-catalog__link--parent menu__link js-link">
+                                        Инструменты для черчения
+                                        <span class="menu-catalog__li-arrow js-btn-close-submenu"></span>
+                                    </a>
+                                    <ul class="menu-catalog__lists-sub hidden js-submenu-catalog-list">
+                                        <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                            <a href="/html/" class="menu-catalog__link menu__link js-link">Кисти из ушного волоса</a>
+                                        </li>
+                                        <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                            <a href="/html/" class="menu-catalog__link menu__link js-link">Каллиграфия, шрифты, орнаменты</a>
+                                        </li>
+                                        <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                            <a href="/html/" class="menu-catalog__link menu__link js-link">т</a>
+                                        </li>
+                                        <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                            <a href="/html/" class="menu-catalog__link menu__link js-link">Инструменты для</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">К</span>
+                                        Каллиграфия, шрифты, орнаменты
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Каллиграфия</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Кисти из ушного волоса</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Л</span>
+                                        Литература
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">М</span>
+                                        Материалы для стекла и керамики
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">А</span>
+                                        Акварельные карандаши
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Б</span>
+                                        Бумага и картон
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Г</span>
+                                        Графитовые карандаши
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Грифели и стержни</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Е</span>
+                                        Ежедневники и записные книжки
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">И</span>
+                                        Инструменты для художника
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Инструменты для черчения</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">К</span>
+                                        Каллиграфия, шрифты, орнаменты
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Каллиграфия</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Кисти из ушного волоса</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Л</span>
+                                        Литература
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">М</span>
+                                        Материалы для стекла и керамики
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">М</span>
+                                        Материалы для стекла и керамики
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link A menu__link js-link">Акварельные карандаши</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Б</span>
+                                        Бумага и картон
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Г</span>
+                                        Графитовые карандаши
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Грифели и стержни</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Е</span>
+                                        Ежедневники и записные книжки
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">И</span>
+                                        Инструменты для художника
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Инструменты для черчения</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">К</span>
+                                        Каллиграфия, шрифты, орнаменты
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Каллиграфия</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">Кисти из ушного волоса</a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">Л</span>
+                                        Литература
+                                    </a>
+                                </li>
+                                <li class="menu-catalog__li menu__li js-menu-catalog-item">
+                                    <a href="/html/" class="menu-catalog__link menu__link js-link">
+                                        <span class="menu-catalog__link-letter">М</span>
+                                        Материалы для стекла и керамики
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="btn btn--golden menu-catalog__btn-else" href="/html/">Все категории</a>
+                    </nav>
+                </div>
+                <form action="#" class="form form--search h-middle-row__form js-form-search">
+                    <span class="form__loupe"></span>
+                    <input type="text" class="form__query-string js-search-query-string" placeholder="Поиск по каталогу">
+                    <div class="form__btn-categories js-menu-categories">
+                        <span class="form__btn-categories-header js-menu-categories-header">Все категории</span>
+                        <nav class="menu-categories menu form__menu-categories js-menu-categories-nav hidden">
+                            <ul class="menu__list menu-categories__list js-menu-categories-list">
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link current-item">Все категории</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Акварельные карандаши</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Бумага и картон</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Грифели и стержни</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Ежедневники и записные
+                                        книжки</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Инструменты для черчения</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Каллиграфия</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Каллиграфия, шрифты,
+                                        орнаменты</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Кисти для творчества</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Кисти из ушного волоса</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Кисти художественные</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Ластики и точилки</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Литература</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Маркеры Материалы для
+                                        золочения</a>
+                                </li>
+                                <li class="menu__li">
+                                    <a href="/html/" class="menu__link menu-categories__link js-menu-categories-link">Материалы для стекла и керамики</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button class="form__submit">Найти</button>
+                </form>
+                <div class="h-middle-row__spacer"></div>
+                <button class="h-middle-row__btn-loop svg-box js-btn-show-search" type="button"></button>
+                <a href="" class="h-middle-row__basket btn-basket">
+                    <div class="btn-basket__img"></div>
+                    <div class="btn-basket__text">
+                        <span class="btn-basket__text-black">15</span>
+                        <span class="hide-less-500">
+                            товаров<br>на <span class="btn-basket__text-black">23 750 руб</span>
+                        </span>
+                    </div>
+                </a>
+                <button class="h-middle-row__btn-menu-sections btn-burger-sections js-btn-menu-sections-mobile">
+                    <span class="btn-burger-sections__lines"></span>
+                </button>
+
+                <!-- Выпадающее меню секций сайта для мобильных -->
+                <div class="menu-sections-mobile h-middle-row__menu-sections-mobile hidden js-menu-sections-mobile">
+                    <div class="js-menu-sections-mobile-scroll-box menu-sections-mobile__scroll-box">
+                        <nav class="sections-nav-mobile">
+                            <ul class="sections-nav-mobile__list">
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Бренды</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Карточки магазина</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Отзывы</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Новости</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Конкурсы</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Скидки</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Школы и курсы</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Школы и курсы</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Школы и курсы</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Школы и курсы</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Школы и курсы</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Школы и курсы</a></li>
+                                <li class="sections-nav-mobile__item"><a href="/html/" class="sections-nav-mobile__link">Школы и курсы</a></li>
+                            </ul>
+                        </nav>
+                        <div class="menu-sections-mobile__block-links">
+                            <a href="/html/" class="menu-sections-mobile__link menu-sections-mobile__link--phone">
+                                <span class="menu-sections-mobile__icon phone"></span>
+                                <span class="menu-sections-mobile__text">7 495 740 6220</span>
+                            </a>
+                        </div>
+                        <div class="menu-sections-mobile__block-links">
+                            <a href="/html/" class="menu-sections-mobile__link">
+                                <span class="menu-sections-mobile__icon vk"></span>
+                                <span class="menu-sections-mobile__text">Чат с нами</span>
+                            </a>
+                            <a href="/html/" class="menu-sections-mobile__link">
+                                <span class="menu-sections-mobile__icon instagram"></span>
+                                <span class="menu-sections-mobile__text">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Строка с ссылками для авторизованых пользователей -->
+                    <div class="menu-sections-mobile__bottom-row h-top-row header__top">
+                        <div class="wrapper">
+                            <div class="h-top-row__container">
+                                <a class="h-top-row__item" href="/html/">
+                                    <span class="h-top-row__icon heart"></span>
+                                    <span class="h-top-row__text">275</span>
+                                </a>
+                                <a class="h-top-row__item" href="/html/">
+                                    <span class="h-top-row__icon four-lines"></span>
+                                    <span class="h-top-row__text">Заказы</span>
+                                </a>
+                                <a class="h-top-row__item" href="/html/">
+                                    <span class="h-top-row__icon profile"></span>
+                                    <span class="h-top-row__text">Профиль</span>
+                                </a>
+                                <a class="h-top-row__item" href="/html/">
+                                    <span class="h-top-row__icon exit h-top-row__icon--left"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Строка с ссылками для НЕавторизованых пользователей -->
+<!--                    <div class="menu-sections-mobile__bottom-row h-top-row header__top">
+                        <div class="wrapper">
+                            <div class="h-top-row__container">
+                                <a class="h-top-row__item" href="/html/">
+                                    <span class="h-top-row__icon heart"></span>
+                                    <span class="h-top-row__text">275</span>
+                                </a>
+                                <i class="h-top-row__spacer&#45;&#45;menu-sections"></i>
+                                <a class="h-top-row__item h-top-row__item&#45;&#45;left-separate" href="/html/">
+                                    <span class="h-top-row__icon entry h-top-row__icon&#45;&#45;left"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>-->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="h-bottom-row header__bottom">
+        <div class="h-bottom-row__container wrapper">
+            <nav class="sections-nav h-bottom-row__nav js-sections-nav">
+                <ul class="sections-nav__list js-sections-nav-list">
+                    <li class="sections-nav__item sections-nav__item--else hidden js-sections-nav-else js-nav-item">
+                        <span class="sections-nav__link">Еще</span>
+                        <ul class="sections-nav__list sections-nav__list--sub js-sections-nav-list-hidden"></ul>
+                    </li>
+                    <li class="sections-nav__item js-nav-item">
+                        <a href="#" class="sections-nav__link">Бренды</a>
+                    </li>
+                    <li class="sections-nav__item js-nav-item">
+                        <a href="#" class="sections-nav__link">Карточки магазина</a>
+                    </li>
+                    <li class="sections-nav__item js-nav-item">
+                        <a href="#" class="sections-nav__link">Отзывы</a>
+                    </li>
+                    <li class="sections-nav__item js-nav-item">
+                        <a href="#" class="sections-nav__link">Новости</a>
+                    </li>
+                    <li class="sections-nav__item js-nav-item">
+                        <a href="#" class="sections-nav__link">Конкурсы</a>
+                    </li>
+                    <li class="sections-nav__item js-nav-item">
+                        <a href="#" class="sections-nav__link">Скидки</a>
+                    </li>
+                    <li class="sections-nav__item js-nav-item">
+                        <a href="#" class="sections-nav__link">Школы и курсы</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</header>
+
+<main class="main main-page js-main">
+
+    <div class="main-page__slider-banners">
+        <!-- Контейнер слайдера с баннерами -->
+        <div class="slider-banners swiper-container js-slider-banners js-slider-container">
+
+            <!-- Обёртка для слайдов -->
+            <div class="swiper-wrapper">
+                <!-- Слайды -->
+                <picture class="swiper-slide slider-banners__slide">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-retina.jpg" media="(-webkit-min-device-pixel-ratio: 2) and (min-width: 1600px)"> <!--Кртинка под этот медиазапрос идёт первой в списке-->
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-320-min.jpg" media="(max-width: 374px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-375-min.jpg" media="(max-width: 767px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-768-min.jpg" media="(max-width: 1023px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1024-min.jpg" media="(max-width: 1599px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-min.jpg" media="(min-width: 1600px)">
+                    <img class="slider-banners__img" src="/assets/static/slider-banners/slider-banners-1-1024-min.jpg" alt="Баннер">
+                    <div class="slider-banners__b-text">
+                        <div class="wrapper slider-banners__b-text-wrapper">
+                            <!--Разбиение по строкам задаётся переводом строки в html-->
+                            <h2 class="slider-banners__b-text-header">Профессиональные
+                                материалы для
+                                творчества
+                            </h2>
+                            <p class="slider-banners__b-text-caption">Faber - Сastell. Немецкое качество
+                                с 1761 года
+                            </p>
+                        </div>
+                    </div>
+                </picture>
+                <picture class="swiper-slide slider-banners__slide">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-retina.jpg" media="(-webkit-min-device-pixel-ratio: 2) and (min-width: 1600px)"> <!--Кртинка под этот медиазапрос идёт первой в списке-->
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-320-min.jpg" media="(max-width: 374px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-375-min.jpg" media="(max-width: 767px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-768-min.jpg" media="(max-width: 1023px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1024-min.jpg" media="(max-width: 1599px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-min.jpg" media="(min-width: 1600px)">
+                    <img class="slider-banners__img" src="/assets/static/slider-banners/slider-banners-1-1024-min.jpg"
+                         alt="Баннер">
+                    <div class="slider-banners__b-text">
+                        <div class="wrapper slider-banners__b-text-wrapper">
+                            <!--Разбиение по строкам задаётся переводом строки в html-->
+                            <h2 class="slider-banners__b-text-header">Другой текст
+                                заголовка баннера
+                            </h2>
+                            <p class="slider-banners__b-text-caption">Faber - Сastell. Немецкое качество
+                                с 1761 года
+                            </p>
+                        </div>
+                    </div>
+                </picture>
+                <picture class="swiper-slide slider-banners__slide">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-retina.jpg" media="(-webkit-min-device-pixel-ratio: 2) and (min-width: 1600px)"> <!--Кртинка под этот медиазапрос идёт первой в списке-->
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-320-min.jpg" media="(max-width: 374px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-375-min.jpg" media="(max-width: 767px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-768-min.jpg" media="(max-width: 1023px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1024-min.jpg" media="(max-width: 1599px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-min.jpg" media="(min-width: 1600px)">
+                    <img class="slider-banners__img" src="/assets/static/slider-banners/slider-banners-1-1024-min.jpg"
+                         alt="Баннер">
+                    <div class="slider-banners__b-text">
+                        <div class="wrapper slider-banners__b-text-wrapper">
+                            <!--Разбиение по строкам задаётся переводом строки в html-->
+                            <h2 class="slider-banners__b-text-header">Профессиональные
+                                материалы для
+                                творчества
+                                Профессиональные
+                                материалы для творчества
+                            </h2>
+                            <p class="slider-banners__b-text-caption">Faber - Сastell. Немецкое качество
+                                с 1761 года.
+                                И ещё немного текста
+                            </p>
+                        </div>
+                    </div>
+                </picture>
+                <picture class="swiper-slide slider-banners__slide">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-retina.jpg" media="(-webkit-min-device-pixel-ratio: 2) and (min-width: 1600px)"> <!--Кртинка под этот медиазапрос идёт первой в списке-->
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-320-min.jpg" media="(max-width: 374px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-375-min.jpg" media="(max-width: 767px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-768-min.jpg" media="(max-width: 1023px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1024-min.jpg" media="(max-width: 1599px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-min.jpg" media="(min-width: 1600px)">
+                    <img class="slider-banners__img" src="/assets/static/slider-banners/slider-banners-1-1024-min.jpg"
+                         alt="Баннер">
+                    <div class="slider-banners__b-text">
+                        <div class="wrapper slider-banners__b-text-wrapper">
+                            <!--Разбиение по строкам задаётся переводом строки в html-->
+                            <h2 class="slider-banners__b-text-header">Профессиональные
+                                материалы для
+                                творчества
+                                Профессиональные материалы для творчества материалы для творчества
+                                материалы для творчества
+                            </h2>
+                            <p class="slider-banners__b-text-caption">Faber - Сastell. Немецкое качество
+                                с 1761 года.
+                                И ещё немного текста И ещё немного текста И ещё немного текста
+                                И ещё немного текста
+                                И ещё немного текста
+                            </p>
+                        </div>
+                    </div>
+                </picture>
+                <picture class="swiper-slide slider-banners__slide">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-retina.jpg" media="(-webkit-min-device-pixel-ratio: 2) and (min-width: 1600px)"> <!--Кртинка под этот медиазапрос идёт первой в списке-->
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-320-min.jpg" media="(max-width: 374px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-375-min.jpg" media="(max-width: 767px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-768-min.jpg" media="(max-width: 1023px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1024-min.jpg" media="(max-width: 1599px)">
+                    <source srcset="/assets/static/slider-banners/slider-banners-1-1600-min.jpg" media="(min-width: 1600px)">
+                    <img class="slider-banners__img" src="/assets/static/slider-banners/slider-banners-1-1024-min.jpg"
+                         alt="Баннер">
+                    <div class="slider-banners__b-text">
+                        <div class="wrapper slider-banners__b-text-wrapper">
+                            <!--Разбиение по строкам задаётся переводом строки в html-->
+                            <h2 class="slider-banners__b-text-header">Профессиональные</h2>
+                            <p class="slider-banners__b-text-caption">Faber - Сastell. Немецкое качество</p>
+                        </div>
+                    </div>
+                </picture>
+            </div>
+
+            <!-- Стрелки навигации для слайдера с баннерами -->
+            <button class="swiper-button-prev arrow arrow--absolute arrow--prev left hide-less-1600 js-slider-arrow-prev"></button>
+            <button class="swiper-button-next arrow arrow--absolute arrow--next right hide-less-1600 js-slider-arrow-next"></button>
+        </div>
+
+        <!-- Пагинация для слайдера с баннерами -->
+        <div class="wrapper">
+            <!-- класс swiper-pagination связывает блок с методом генерации пагинации слайдера баннеров-->
+            <div class="pagination main-page__slider-banners-pagination swiper-pagination js-slider-banners-pagination"></div>
+        </div>
+    </div>
+
+    <div class="main-page__item main-page__item--padding-b main-page__item--padding-top-big">
+
+        <div class="wrapper">
+            <div class="slider js-slider-container">
+                <div class="slider__header">
+                    <h2 class="headers--block">Популярные категории</h2>
+                    <div class="slider__arrow-container">
+                        <button class="slider__arrow arrow arrow--prev swiper-button-prev js-slider-arrow-prev"></button>
+                        <button class="slider__arrow arrow arrow--next swiper-button-next js-slider-arrow-next"></button>
+                    </div>
+                </div>
+
+                <!-- Контейнер слайдера -->
+                <div class="slider__container slider__container--border swiper-container js-slider-pop-categories">
+
+                    <!-- Обёртка для слайдов -->
+                    <div class="swiper-wrapper">
+                        <div class="slider__item swiper-slide">
+                            <div class="pop-cat-slide">
+                                <div class="pop-cat-slide__picture-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--picture">
+                                        <picture class="pop-cat-slide__picture">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-1-mobile.png" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-1-desctop.png" media="(min-width: 768px)">
+                                            <img src="" alt="" class="pop-cat-slide__picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="pop-cat-slide__name-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--cat-name">
+                                        Бумага и картон <span class="pop-cat-slide__cat-count">1 723</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="pop-cat-slide">
+                                <div class="pop-cat-slide__picture-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--picture">
+                                        <picture class="pop-cat-slide__picture">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-2-mobile.png" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-2-desctop.png" media="(min-width: 768px)">
+                                            <img src="" alt="" class="pop-cat-slide__picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="pop-cat-slide__name-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--cat-name">
+                                        Подарочные идеи <span class="pop-cat-slide__cat-count">843</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="pop-cat-slide">
+                                <div class="pop-cat-slide__picture-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--picture">
+                                        <picture class="pop-cat-slide__picture">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-3-mobile.png" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-3-mobile.png" media="(min-width: 768px)">
+                                            <img src="" alt="" class="pop-cat-slide__picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="pop-cat-slide__name-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--cat-name">
+                                        Каллиграфия <span class="pop-cat-slide__cat-count">2 034</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="pop-cat-slide">
+                                <div class="pop-cat-slide__picture-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--picture">
+                                        <picture class="pop-cat-slide__picture">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-4-mobile.png" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-4-mobile.png" media="(min-width: 768px)">
+                                            <img src="" alt="" class="pop-cat-slide__picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="pop-cat-slide__name-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--cat-name">
+                                        Краски <span class="pop-cat-slide__cat-count">1 025</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="pop-cat-slide">
+                                <div class="pop-cat-slide__picture-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--picture">
+                                        <picture class="pop-cat-slide__picture">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-5-mobile.png" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-5-mobile.png" media="(min-width: 768px)">
+                                            <img src="" alt="" class="pop-cat-slide__picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="pop-cat-slide__name-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--cat-name">
+                                        Маркеры <span class="pop-cat-slide__cat-count">3 614</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="pop-cat-slide">
+                                <div class="pop-cat-slide__picture-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--picture">
+                                        <picture class="pop-cat-slide__picture">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-6-mobile.png" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-6-mobile.png" media="(min-width: 768px)">
+                                            <img src="" alt="" class="pop-cat-slide__picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="pop-cat-slide__name-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--cat-name">
+                                        Кисти <span class="pop-cat-slide__cat-count">1 922</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="pop-cat-slide">
+                                <div class="pop-cat-slide__picture-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--picture">
+                                        <picture class="pop-cat-slide__picture">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-1-mobile.png" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-1-desctop.png" media="(min-width: 768px)">
+                                            <img src="" alt="" class="pop-cat-slide__picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="pop-cat-slide__name-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--cat-name">
+                                        Бумага и картон <span class="pop-cat-slide__cat-count">1 723</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="pop-cat-slide">
+                                <div class="pop-cat-slide__picture-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--picture">
+                                        <picture class="pop-cat-slide__picture">
+                                            <source srcset="/assets/static/slider-goods-month/sm_banner.png" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/slider-goods-month/sm_banner.png" media="(min-width: 768px)">
+                                            <img src="" alt="" class="pop-cat-slide__picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="pop-cat-slide__name-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--cat-name">
+                                        Подарочные идеи <span class="pop-cat-slide__cat-count">843</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="pop-cat-slide">
+                                <div class="pop-cat-slide__picture-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--picture">
+                                        <picture class="pop-cat-slide__picture">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-3-mobile.png" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/slider-pop-categories/categories-3-mobile.png" media="(min-width: 768px)">
+                                            <img src="" alt="" class="pop-cat-slide__picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="pop-cat-slide__name-wrapper">
+                                    <a href="#" class="pop-cat-slide__link pop-cat-slide__link--cat-name">
+                                        Каллиграфия <span class="pop-cat-slide__cat-count">2 034</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn--show-more" href="#Показать-еще">Показать еще</a>
+        </div>
+
+    </div>
+
+    <div class="main-page__item main-page__item--padding-b main-page__item--gray">
+
+        <div class="wrapper">
+            <div class="slider js-slider-container">
+                <div class="slider__header slider__header--align-flex-start">
+                    <h2 class="headers--block headers--no-shrink">Товары месяца</h2>
+                    <div class="slider__header-description">
+                        Самые популярные и продаваемые товары за последний месяц
+                    </div>
+                    <div class="slider__arrow-container">
+                        <button class="slider__arrow arrow arrow--prev swiper-button-prev js-slider-arrow-prev"></button>
+                        <button class="slider__arrow arrow arrow--next swiper-button-next js-slider-arrow-next"></button>
+                    </div>
+                </div>
+
+                <!-- Контейнер слайдера -->
+                <div class="slider__container swiper-container js-slider-goods-month">
+
+                    <!-- Обёртка для слайдов -->
+                    <div class="swiper-wrapper">
+                        <div class="slider__item slider__item--two-rows-banner slider__item--two-rows-slider swiper-slide js-two-rows-slide js-banner">
+                            <div class="cat-sect-item cat-sect-item--banner cat-sect-item--slider-banner">
+                                <a href="#" class="cat-sect-item__banner-link">
+                                    <picture class="cat-sect-item__banner-picture">
+                                        <source srcset="/assets/static/different/cat_sect_tile_banner_empty.jpg" media="(max-width: 767px)">
+                                        <source srcset="/assets/static/different/cat_sect_tile_banner_empty.jpg" media="(min-width: 768px)">
+                                        <img src="" class="cat-sect-item__banner-img">
+                                    </picture>
+                                    <div class="cat-sect-item__tile-banner-text-cont">Дарим кисти и краски</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">MOVEMOON</div>
+                                        <div class="cat-sect-item__section-description">Акварель ручной работы</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 000 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">MOVEMOON</div>
+                                        <div class="cat-sect-item__section-description">Акварель ручной работы</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 000 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">MOVEMOON</div>
+                                        <div class="cat-sect-item__section-description">Акварель ручной работы</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 000 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn--show-more"  href="#Показать-еще">Показать еще</a>
+        </div>
+
+    </div>
+
+    <div class="main-page__item main-page__item--padding-top-big">
+
+        <div class="wrapper">
+            <div class="slider js-slider-container">
+                <div class="slider__header">
+                    <h2 class="headers--block">Новинки и новые поступления</h2>
+                    <div class="slider__arrow-container">
+                        <button class="slider__arrow arrow arrow--prev swiper-button-prev js-slider-arrow-prev"></button>
+                        <button class="slider__arrow arrow arrow--next swiper-button-next js-slider-arrow-next"></button>
+                    </div>
+                </div>
+
+                <!-- Контейнер слайдера -->
+                <div class="slider__container swiper-container js-slider-new-items">
+                    <!-- Обёртка для слайдов -->
+                    <div class="swiper-wrapper">
+                        <div class="slider__item slider__item--two-rows-banner slider__item--two-rows-slider swiper-slide js-two-rows-slide js-banner">
+                            <div class="cat-sect-item cat-sect-item--banner cat-sect-item--slider-banner">
+                                <a href="#" class="cat-sect-item__banner-link">
+                                    <picture class="cat-sect-item__banner-picture">
+                                        <source srcset="/assets/static/slider-goods-month/sm_banner2.png" media="(max-width: 767px)">
+                                        <source srcset="/assets/static/slider-goods-month/sm_banner2.png" media="(min-width: 768px)">
+                                        <img src="" class="cat-sect-item__banner-img">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">MOVEMOON</div>
+                                        <div class="cat-sect-item__section-description">Акварель ручной работы</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 000 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">MOVEMOON</div>
+                                        <div class="cat-sect-item__section-description">Акварель ручной работы</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 000 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">MOVEMOON</div>
+                                        <div class="cat-sect-item__section-description">Акварель ручной работы</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 000 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide slider__item--two-rows-slider js-two-rows-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn--show-more"  href="#Показать-еще">Показать еще</a>
+        </div>
+
+    </div>
+
+    <div class="main-page__item">
+
+        <div class="wrapper">
+            <div class="slider js-slider-container">
+                <div class="slider__header">
+                    <h2 class="headers--block">Акции и скидки</h2>
+                    <div class="slider__arrow-container">
+                        <button class="slider__arrow arrow arrow--prev swiper-button-prev js-slider-arrow-prev"></button>
+                        <button class="slider__arrow arrow arrow--next swiper-button-next js-slider-arrow-next"></button>
+                    </div>
+                </div>
+
+                <!-- Контейнер слайдера с баннерами -->
+                <div class="slider__container slider__container--border swiper-container js-slider-stock-discounts">
+                    <!-- Обёртка для слайдов -->
+                    <div class="swiper-wrapper">
+                        <div class="slider__item swiper-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/03.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">MOVEMOON</div>
+                                        <div class="cat-sect-item__section-description">Акварель ручной работы</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 000 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/01.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">WINSOR NEWTON</div>
+                                        <div class="cat-sect-item__section-description">Акварель Artists' в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 4 878 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item swiper-slide">
+                            <div class="cat-sect-item cat-sect-item--slider">
+                                <div class="cat-sect-item__picture-wrapper">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--picture">
+                                        <picture class="cat-sect-item__sect-picture">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(max-width: 767px)">
+                                            <source srcset="/assets/static/different/cat_sect_item_picture/02.jpg" media="(min-width: 768px)">
+                                            <img src="" alt="" class="cat-sect-item__sect-picture-img">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__sect-name-wrapper cat-sect-item__sect-name-wrapper--overflow">
+                                    <a href="#" class="cat-sect-item__link cat-sect-item__link--sect-name">
+                                        <div class="cat-sect-item__section-brand">FINECOLOUR</div>
+                                        <div class="cat-sect-item__section-description">Спиртовые маркеры "Brush" в наборах, название товара, название товара</div>
+                                    </a>
+                                </div>
+
+                                <div class="cat-sect-item__price-wrapper">
+                                    <div class="cat-sect-item__price">от 2 502 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn--show-more"  href="#Показать-еще">Показать еще</a>
+        </div>
+
+    </div>
+
+    <div class="main-page__item">
+        <div class="wrapper">
+            <h2 class="headers--block">Новости</h2>
+            <div class="news-tile">
+                <div class="news-tile__c-item news-tile__c-item--square">
+                    <figure class="news-tile__item">
+                        <div class="news-tile__c-img">
+                            <a href="#!" class="news-tile__link">
+                                <img src="/assets/static/news-tile/news-tile-1.jpg" class="news-tile__img" alt="">
+                            </a>
+                            <span class="news-tile__img-sticker green">Новинки</span>
+                        </div>
+                        <span class="news-tile__date">15 Апреля 2019</span>
+                        <figcaption class="news-tile__caption">
+                            <a href="#!" class="news-tile__link">
+                                Новые материалы для граффити
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="news-tile__c-item news-tile__c-item--tow">
+                    <figure class="news-tile__item small">
+                        <div class="news-tile__c-img">
+                            <a href="#!" class="news-tile__link">
+                                <img src="/assets/static/news-tile/news-tile-2.jpg"
+                                     class="news-tile__img news-tile__img--small" alt="">
+                            </a>
+                            <span class="news-tile__img-sticker yellow">Акция</span>
+                        </div>
+                        <span class="news-tile__date">15 Апреля 2019</span>
+                        <figcaption class="news-tile__caption">
+                            <a href="#!" class="news-tile__link">Дарим краски и кисти</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="news-tile__item small">
+                        <div class="news-tile__c-img">
+                            <a href="#!" class="news-tile__link">
+                                <img src="/assets/static/news-tile/news-tile-3.jpg"
+                                     class="news-tile__img news-tile__img--small" alt="">
+                            </a>
+                            <span class="news-tile__img-sticker red">Скидка 30%</span>
+                        </div>
+                        <span class="news-tile__date">15 Апреля 2019</span>
+                        <figcaption class="news-tile__caption">
+                            <a href="#!" class="news-tile__link">Маркеры со скидкой 33%</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="news-tile__c-item news-tile__c-item--rectangle">
+                    <figure class="news-tile__item">
+                        <div class="news-tile__c-img">
+                            <a href="#!" class="news-tile__link">
+                                <img src="/assets/static/news-tile/news-tile-5.jpg" class="news-tile__img" alt="">
+                            </a>
+                            <span class="news-tile__img-sticker purple">Подарки</span>
+                        </div>
+                        <span class="news-tile__date">15 Апреля 2019</span>
+                        <figcaption class="news-tile__caption">
+                            <a href="#!" class="news-tile__link">Дарим краски и кисти</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <button class="btn btn--show-more btn--show-more-news">Показать еще</button>
+        </div>
+    </div>
+
+    <div class="main-page__item main-page__item--padding-top-big">
+        <div class="wrapper">
+            <div class="two-text-column">
+                <div>
+                    <h2 class="two-text-column__header headers--block">
+                        Интернет-магазин художественных товаров в Москве – лучшее для художника!
+                    </h2>
+                </div>
+                <div class="two-text-column__description">
+                    Этюд — крупнейший художественный интернет-магазин, в котором вы найдете лучшие товары для художников,
+                    дизайнеров, архитекторов, и творческих людей. Самый большой ассортимент всего необходимого для творчества, для
+                    черчения от известных производителей.
+                </div>
+            </div>
+        </div>
+        <div class="slider-logos slider-logos--mrg-top js-slider-container">
+            <div class="wrapper hide-less-768">
+                <div class="slider__arrow-container">
+                    <button class="swiper-button-prev arrow arrow--prev js-slider-arrow-prev"></button>
+                    <button class="swiper-button-next arrow arrow--next arrow--mrg-left js-slider-arrow-next"></button>
+                </div>
+            </div>
+
+            <!-- Контейнер слайдера -->
+
+            <div class="slider-logos__container slider-logos__container--mrg-top swiper-container js-slider-logos">
+                <!-- Обёртка для слайдов -->
+                <div class="swiper-wrapper slider-logos__wrapper">
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-1.png" class="slider-logos__img">
+                    </div>
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-2.png" class="slider-logos__img">
+                    </div>
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-3.png" class="slider-logos__img">
+                    </div>
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-4.png" class="slider-logos__img">
+                    </div>
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-5.png" class="slider-logos__img">
+                    </div>
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-6.png" class="slider-logos__img">
+                    </div>
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-7.png" class="slider-logos__img">
+                    </div>
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-8.png" class="slider-logos__img">
+                    </div>
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-9.png" class="slider-logos__img">
+                    </div>
+                    <div class="slider-logos__item swiper-slide">
+                        <img src="/assets/static/slider-logos/label-10.png" class="slider-logos__img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="main-page__logos-border"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-page__item">
+
+        <div class="wrapper main-page__item-container">
+            <div class="two-text-column">
+                <div class="two-text-column__b-header">
+                    <h2 class="headers--block">Instagram</h2>
+                </div>
+                <div class="two-text-column__description">
+                    Подписывайтесь на наш Инстаграм. Самый большой ассортимент всего необходимого для творчествай.
+                </div>
+            </div>
+            <div class="instagram-pic main-page__b-instagram-pic">
+                <div class="instagram-pic__item"><img src="/assets/static/instagram/instagram-1.jpg" class="instagram-pic__item-img" alt="picture-from-instagram"></div>
+                <div class="instagram-pic__item"><img src="/assets/static/instagram/instagram-2.jpg" class="instagram-pic__item-img" alt="picture-from-instagram"></div>
+                <div class="instagram-pic__item"><img src="/assets/static/instagram/instagram-4.jpg" class="instagram-pic__item-img" alt="picture-from-instagram"></div>
+                <div class="instagram-pic__item"><img src="/assets/static/instagram/instagram-1.jpg" class="instagram-pic__item-img" alt="picture-from-instagram"></div>
+                <div class="instagram-pic__item"><img src="/assets/static/instagram/instagram-2.jpg" class="instagram-pic__item-img" alt="picture-from-instagram"></div>
+                <div class="instagram-pic__item"><img src="/assets/static/instagram/instagram-4.jpg" class="instagram-pic__item-img" alt="picture-from-instagram"></div>
+                <div class="instagram-pic__item"><img src="/assets/static/instagram/instagram-4.jpg" class="instagram-pic__item-img" alt="picture-from-instagram"></div>
+            </div>
+            <button class="btn btn--show-more">Показать еще</button>
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer__subscription f-b-subscription">
+        <div class="wrapper">
+            <div class="f-b-subscription__container">
+                <h3 class="headers--block f-b-subscription__header">
+                    Будьте в курсе новостей и акций
+                </h3>
+                <form action="#" id="form-subscription" class="form form--subscription f-b-subscription__form">
+                    <input type="text" class="form__query-string" placeholder="Ваш e-mail">
+                    <button class="form__submit">Подписаться</button>
+                </form>
+                <label class="checkbox f-b-subscription__checkbox">
+                    <input type="checkbox" form="form-subscription">
+                    <p class="checkbox__text"><a href="#">Текст</a> о согласии на подписку и т.п. инфо</p>
+                </label>
+                <p class="f-b-subscription__description">
+                    Мы не спамим и отправляем действительно только актуальные новости и обновления!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer__b-links f-b-links">
+        <div class="wrapper">
+            <div class="f-b-links__container">
+                <div class="f-b-links__item">
+                    <div class="f-b-links__copyright">
+                        © 2019 Etudesite.ru<br/>Все права сайта защищены.
+                    </div>
+                    <div class="social-links f-b-links__social-links">
+                        <a href="#" class="social-links__link social-links__link--instagram"></a>
+                        <a href="#" class="social-links__link social-links__link--facebook"></a>
+                        <a href="#" class="social-links__link social-links__link--vk"></a>
+                        <a href="#" class="social-links__link social-links__link--youtube"></a>
+                    </div>
+                </div>
+                <div class="f-b-links__item">
+                    <ul class="f-b-links__nav-list f-b-links__nav-list--bold">
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Каталог товаров</a>
+                        </li>
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Бренды</a>
+                        </li>
+                    </ul>
+                    <div class="f-b-links__b-contacts">
+                        Тел. <a href="tel:+7 (495) 740 6220">+7 (495) 740 6220</a> <a href="mailto:client@etudesite.ru">client@etudesite.ru</a>
+                    </div>
+                </div>
+                <div class="f-b-links__item">
+                    <ul class="f-b-links__nav-list">
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Карточки магазина</a>
+                        </li>
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Отзывы</a>
+                        </li>
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Новости</a>
+                        </li>
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Конкурсы</a>
+                        </li>
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Скидки</a>
+                        </li>
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Курсы каллиграфии</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-b-links__item">
+                    <ul class="f-b-links__nav-list">
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Доставка</a>
+                        </li>
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Контакты</a>
+                        </li>
+                        <li class="f-b-links__nav-item">
+                            <a href="#" class="f-b-links__nav-link">Карта сайта</a>
+                        </li>
+                    </ul>
+                    <div class="f-b-links__payment-systems">
+                        <img src="/assets/static/payment-systems/master-card.png" alt="" class="f-b-links__payment-item master-card">
+                        <img src="/assets/static/payment-systems/visa.png" alt="" class="f-b-links__payment-item visa">
+                        <img src="/assets/static/payment-systems/pay-keeper.png" alt="" class="f-b-links__payment-item pay-keeper">
+                        <img src="/assets/static/payment-systems/yandex-market.png" alt="" class="f-b-links__payment-item yandex-market">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="/assets/build/js/common.js"></script>
+<script src="/assets/build/js/main_page.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+require('./two-text-column.less');

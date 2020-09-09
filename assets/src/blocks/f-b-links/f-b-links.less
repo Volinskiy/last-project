@@ -1,0 +1,255 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.f-b-links {
+    @line-height: 1.7;
+    @text-center: center;
+    @text-initial: initial;
+
+
+    background-color: @white;
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 0 180px 0;
+
+        @media @min-650 {
+            flex-direction: row;
+            padding-bottom: 50px;
+        }
+        @media @min-768 {
+            padding: 55px 0 50px;
+        }
+        @media @min-1024 {
+            padding: 55px 0 60px;
+        }
+        @media @min-1600 {
+            padding: 65px 0 80px;
+        }
+    }
+
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-shrink: 1;
+        align-items: center;
+
+        @media @min-650 {
+            width: 22%;
+            align-items: flex-start;
+            max-width: 177px;
+
+            &:first-child,
+            &:last-child {
+                max-width: 200px;
+            }
+        }
+
+
+        &:first-child {
+
+            @media @max-650 {
+                order: 1;
+                border-top: 1px solid @main-gray-background;
+                border-bottom: 1px solid @main-gray-background;
+            }
+        }
+
+
+        & + & {
+            margin-bottom: 10px;
+
+            @media @min-650 {
+                margin-top: 0;
+                border-top: none;
+                padding-top: 0;
+                margin-left: 8px;
+                margin-bottom: initial;
+            }
+        }
+    }
+
+
+    &__copyright {
+        color: @light-gray-text;
+        line-height: @line-height;
+        text-align: @text-center;
+        margin-top: 100px;
+        margin-bottom: 30px;
+
+        @media @min-650 {
+            text-align: @text-initial;
+            margin-top: initial;
+            margin-bottom: initial;
+        }
+        @media @min-768 {
+            max-width: 100%;
+        }
+    }
+
+
+    &__social-links {
+        position: absolute;
+        bottom: 50px;
+        margin-top: 20px;
+        width: 152px;
+
+        @media @min-650 {
+            position: static;
+            margin-top: initial;
+            width: 140px;
+        }
+        @media @min-768 {
+            width: 152px;
+        }
+    }
+
+
+    &__nav {
+
+        &-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            min-width: 0;
+
+            &--bold {
+
+                .f-b-links__nav-link {
+                    color: black;
+                    font-family: @Font-Montserrat;
+                }
+            }
+        }
+        &-item {
+            min-width: 0;
+            text-align: @text-center;
+
+            @media @min-650 {
+                text-align: @text-initial;
+            }
+        }
+        &-link {
+            color: @light-gray-text;
+            line-height: @line-height;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+    &__b-contacts {
+        line-height: @line-height;
+        text-align: @text-center;
+        margin-top: 20px;
+        max-width: 200px;
+        position: absolute;
+        bottom: 280px;
+
+        @media @min-650 {
+            text-align: @text-initial;
+            margin-top: initial;
+            position: static;
+        }
+
+
+        & > a {
+            color: inherit;
+        }
+    }
+
+
+    &__payment-systems {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 20px;
+        justify-content: space-around;
+        align-items: center;
+        position: static;
+
+        @media @max-650 {
+            position: absolute;
+            bottom: 100px;
+        }
+    }
+
+    &__payment-item {
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        & + & {
+            margin-left: 15px;
+
+            @media @min-650 {
+                margin-left: 6px;
+            }
+            @media @min-1024 {
+                margin-left: 8px;
+            }
+        }
+
+        &.master-card {
+            width: 35px;
+            height: 21px;
+
+            @media @min-650 {
+                width: 22px;
+                height: 13px;
+            }
+            @media @min-1024 {
+                width: 29px;
+                height: 18px;
+            }
+        }
+        &.visa {
+            width: 44px;
+            height: 14px;
+
+            @media @min-650 {
+                width: 28px;
+                height: 9px;
+            }
+            @media @min-1024 {
+                width: 36px;
+                height: 12px;
+            }
+        }
+        &.pay-keeper {
+            width: 54px;
+            height: 17px;
+
+            @media @min-650 {
+                width: 34px;
+                height: 10px;
+            }
+            @media @min-1024 {
+                width: 45px;
+                height: 14px;
+            }
+        }
+        &.yandex-market {
+            width: 76px;
+            height: 26px;
+
+            @media @min-650 {
+                width: 47px;
+                height: 16px;
+            }
+            @media @min-1024 {
+                width: 62px;
+                height: 21px;
+            }
+        }
+    }
+}

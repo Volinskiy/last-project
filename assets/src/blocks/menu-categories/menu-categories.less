@@ -1,0 +1,21 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.menu-categories {
+    width: 250px;
+
+    @media @min-768 {
+        width: 300px;
+    }
+
+    &__link {
+        font-style: initial;
+        padding: 7px 20px 7px 20px;
+    }
+
+    &__list {
+        max-height: 70vh;
+        height: 400px;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../mixins.less';
+@import '../variables';
+
+.header {
+    //На мобильных задаём высоту, чтобы заполнить пространство под фиксированной плашкой
+    @media @max-375 {
+        height: @header-height-min-start;
+    }
+    @media @min-375 {
+        height: @header-height-min-375;
+    }
+    @media @min-400 {
+        height: @header-height-min-400;
+    }
+    @media @min-768 {
+        height: initial;
+    }
+
+    &.fixed {
+        height: 179px;
+
+        .header__top,
+        .header__bottom {
+            display: none;
+        }
+
+        .header__middle {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.sections-nav {
+
+    &__list {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+
+        &--sub {
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            left: 0;
+            top: 100%;
+            height: auto;
+            background-color: @white;
+
+            .sections-nav__item {
+                max-width: initial;
+                border-top: 1px solid @gray-controls;
+                border-left: none;
+            }
+
+            .sections-nav__link {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+
+    &__item {
+        box-sizing: border-box;
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+        max-width: 176px;
+        min-width: 100px;
+        order: 0;
+        border-left: 1px solid @gray-controls;
+        overflow: hidden;
+
+        &:nth-child(2) {
+            border-left: none;
+        }
+
+
+        &--else {
+            display: block;
+            position: relative;
+            order: 1;
+            flex-shrink: 1;
+            overflow: visible;
+            min-width: 100px;
+
+            @media @min-768 {
+                max-width: 110px;
+            }
+
+            &.opened {
+                .sections-nav__list--sub {
+                    display: flex !important;
+                }
+            }
+
+            span {
+                cursor: pointer;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                &::after {
+                    width: 12px;
+                    height: 7px;
+                    margin-left: 10px;
+                    content: '';
+                    background: url("../common/img/common-arrow-down.svg") center center no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+
+
+    &__link {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: @Font-Montserrat;
+        padding-left: 10px;
+        padding-right: 10px;
+        // Перестроение в две и более строки пункта меню на размерах экр. < 1024 - при помощи перевода строки
+        white-space: pre-line;
+        line-height: 1rem;
+        color: black;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid transparent;
+
+        @media @min-1024 {
+            white-space: initial;
+        }
+
+        &:hover {
+            border-bottom-color: @main-golden;
+            text-decoration: underline;
+        }
+    }
+}

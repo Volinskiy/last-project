@@ -1,0 +1,227 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    min-width: 0; // Даём форме возможность ужиматься до ширины меньше, чем задано по-умолчанию
+
+    &:focus {
+        outline: none;
+    }
+
+    &--search {
+        padding: 2px;
+        background-color: @white;
+        border: 1px solid @gray-controls;
+        border-radius: 5px;
+
+
+        @media @min-375 {
+            padding: 3px;
+        }
+
+
+        .form__query-string {
+            margin-right: 3px;
+
+            @media @min-600 {
+                margin-right: 0;
+            }
+
+        }
+    }
+
+    &--subscription {
+        flex-direction: column;
+        position: relative; // Чтобы можно было задать позиуионирование для checkbox
+
+        @media @min-500 {
+            flex-direction: row;
+        }
+
+
+        .form__submit {
+            @media @max-500 {
+                flex-grow: 1;
+                flex-shrink: 1;
+                margin-top: 10px;
+            }
+            @media @max-768 {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+
+        .form__query-string {
+            @media @max-500 {
+                margin-right: 0;
+            }
+        }
+    }
+
+
+    &.active {
+        border-color: @main-golden;
+    }
+
+
+    &__loupe {
+        display: none;
+        flex: 0 0 22px;
+        height: 22px;
+        align-self: center;
+        margin: 0 4px 0 15px;
+        fill: @gray-controls;
+        background: url("../common/img/common-search.svg");
+
+        @media @min-1024 {
+            display: initial;
+        }
+    }
+
+
+    &__query-string {
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 0; // Даём возможность input сжиматься менее 194px
+        border: none;
+        padding:  0 0 0 10px !important;
+        border-radius: 5px;
+        margin-right: 10px;
+        box-sizing: border-box;
+        font-size: 13px !important;
+        line-height: 17px !important;
+
+        @media @min-375 {
+            font-size: 15px;
+            line-height: 19px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+    &__btn-categories {
+        position: relative;
+        display: none;
+        flex: 0 0 143px;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 4px;
+        padding: 0;
+        margin: 0 3px;
+        border: 1px solid transparent;
+        background-color: transparent;
+        font-style: italic;
+        font-size: 13px;
+        color: @light-gray-text;
+        cursor: pointer;
+        box-sizing: border-box;
+
+        @media @min-600 {
+            flex-basis: 140px;
+            margin-right: 5px;
+        }
+        @media @min-768 {
+            display: flex;
+            flex-basis: 150px;
+        }
+
+        &::before {
+            display: block;
+            position: absolute;
+            left: 0;
+            height: 30px;
+            content: "";
+            border-left: 1px solid @gray-controls;
+        }
+        &::after {
+            content: '';
+            width: 12px;
+            height: 7px;
+            background: url("../common/img/common-arrow-down.svg");
+            margin-right: 7px;
+        }
+        &:active {
+            border-color: @main-golden;
+        }
+        &:focus {
+            outline: none;
+        }
+
+
+        &.opened {
+            .button-hover; // Миксин
+
+            // Скрываем вертикальную полосу при наведении
+            &::before {
+                border-color: transparent;
+            }
+            &::after {
+                background: url("../common/img/common-arrow-up.svg");
+            }
+        }
+
+    }
+
+    &__btn-categories-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 76%;
+        height: 100%;
+        overflow: hidden;
+        padding-left: 5px;
+        line-height: 0.9;
+        font-size: 12px;
+
+        @media @min-768 {
+            line-height: 1.1;
+            font-size: 13px;
+
+        }
+    }
+
+    &__menu-categories {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+    }
+
+    &__submit {
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 0 8px;
+        border: none;
+        background-color: @main-golden;
+        color: @white;
+        border-radius: 4px;
+        font-size: 13px;
+        font-family: @Font-Montserrat;
+
+        @media @min-375 {
+            font-size: 15px;
+        }
+        @media @min-500 {
+            padding: 0 20px;
+        }
+
+        &:hover {
+            background: #FFC700;
+        }
+        &:active {
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}

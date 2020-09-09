@@ -1,0 +1,91 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.menu-sections-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: @white;
+    overflow: hidden;
+
+
+    &::before {
+        @media @max-768 {
+            content: "";
+            position: absolute;
+            top: -1px;
+            width: 100%;
+            height: 1px;
+            box-shadow: 0 0 15px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__scroll-box {
+        margin: 20px 0;
+    }
+
+    &__bottom-row {
+        display: flex;
+    }
+
+    &__block-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 17px;
+        border-top: @border-control;
+        padding: 30px 0;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: black;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+
+        &--phone {
+            font-size: 20px;
+        }
+
+        & + & {
+            margin-left: 45px;
+        }
+    }
+
+
+    &__icon {
+        margin-right: 15px;
+
+        &.phone {
+            background-image: url("../common/img/common-phone.svg");
+            width: 16px;
+            height: 16px;
+        }
+
+        &.vk {
+            background-image: url("../common/img/common-vk-color.svg");
+            width: 21px;
+            height: 11px;
+        }
+
+        &.instagram {
+            background-image: url("../common/img/common-instagram-color.svg");
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+//Стили оверлея (затемнение фона при открыии меню на мобильных)
+.overlay-menu-sections {
+    .overlay-mixin;
+}
+//Стили оверлея (затемнение фона при открыии меню на мобильных)
+body.body-overflow-menu-sections {
+    .body-overflow-h;
+}

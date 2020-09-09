@@ -1,0 +1,36 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.headers {
+    &--block {
+        margin: 0;
+        font-size: 20px;
+        font-family: @Font-Montserrat;
+        font-weight: 500;
+        line-height: 30px;
+
+        @media @min-768 {
+            font-size: 25px;
+        }
+    }
+
+    &--no-shrink {
+        flex-shrink: 0;
+    }
+
+    &__yellow {
+        color: #FFA800;
+        display: inline;
+    }
+
+    &--sf-header {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+
+        @media @min-768 and @max-1600, @max-375 {
+            font-size: 22px;
+        }
+    }
+}

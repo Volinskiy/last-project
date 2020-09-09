@@ -1,0 +1,35 @@
+@import '../mixins.less';
+@import '../variables';
+
+
+.h-bottom-row {
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+
+    @media @min-768 {
+        display: block;
+    }
+
+
+    &__container {
+        box-sizing: border-box;
+        height: 50px;
+        padding: 0 0 0 82px;
+
+        @media @min-375 {
+            padding-left: 92px;
+        }
+        @media @min-768 {
+            padding-left: 210px;
+        }
+        @media @min-1600 {
+            padding-left: 240px;
+        }
+    }
+
+    &__nav {
+        height: 100%;
+    }
+}
