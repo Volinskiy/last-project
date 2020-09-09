@@ -22,7 +22,7 @@
     "inputmask": "^4.0.9",
     "ismobilejs": "^1.0.3",
     "less": "^3.10.3",
-    "less-loader": "4..0",
+    "less-loader": "4.1.0",
     "magnific-popup": "^1.1.0",
     "nouislider": "^13.1.5",
     "perfect-scrollbar": "^1.4.0",
