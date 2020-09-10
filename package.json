@@ -11,6 +11,7 @@
     "dev": "set NODE_DEV_SERVER=true NODE_ENV=development && webpack-dev-server"
   },
   
+  
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@symfony/webpack-encore": "^0.30.2",
