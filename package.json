@@ -32,7 +32,7 @@
     "picturefill": "^3.0.3",
     "smooth-scrollbar": "^8.5.0",
     "svg-sprite-loader": "^4.1.6",
-    "swiper": "^5.1.0",
+    "swiper": "^6.5.1",
     "throttle-debounce": "^2.1.0",
     "wnumb": "^1.2.0",
     "ymaps": "^0.2.1"
